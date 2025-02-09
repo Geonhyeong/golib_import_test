@@ -1,0 +1,9 @@
+syntax = "proto3";
+package common;
+
+option go_package = "go/proto/common;common";
+
+message Item {
+  int32 id = 1;
+  string value = 2;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+package enhancement;
+
+import "common/model.proto";
+
+option go_package = "go/proto/enhancement;enhancement";
+
+service EnhancementService {
+  rpc EnhanceItem(EnhanceItemRequest) returns (EnhanceItemResponse);
+}
+
+message EnhanceItemRequest {
+  common.Item item = 1;
+}
+
+message EnhanceItemResponse {
+  common.Item item = 1;
+}
